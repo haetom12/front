@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <script>
+    'use strict';
+
+    function msg1() {
+      // let su1 = prompt("수1를 입력하세요?");
+      // su1 += 100;
+      // console.log("su1 : " + su1);
+      // document.write("<br/>su1 : ", su1);
+      let su2 = prompt("수2를 입력하세요?");       /* prompt는 입력창이 나옴 */
+      // let su3 = parseInt(su2) + 200;
+      let su3 = eval(su2) + 200;  /*eval은 입력창에서 100+200과 같은 입력의 연산이 가능하다*/
+      console.log("su2 : " + su2);
+      console.log("su3 : " + su3);
+      document.write("<br/>su2 : ", su2);
+      document.write("<br/>su3 : ", su3);
+      let ans = confirm("작업을 계속하기겠습니까?"); /*confirm은 예 아니오를 고르는 창이 뜸  */
+      document.write("<br/>ans : ", ans);
+
+
+      /* NaN 숫자가 아닌수를 계산했을때 나오는 오류 */
+    }
+  </script>
+</head>
+<body>
+  <h2>메세지를 통한 값의 입력</h2>
+  <p>값을 입력해보세요
+    <input type="button" value="값입력" onclick="msg1()"/>
+  </p>
+</body>
+</html>

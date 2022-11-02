@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calcu</title>
+  <script>
+    'use strict'
+    function calc() {
+      let su3 = eval(document.getElementById("su1").value);
+      myform.su3.value = su3;
+    }
+  </script>
+</head>
+<body>
+  <h2>계산할 수를 입력하세요</h2>
+    <form name="myform" method="get" action="#">
+      <p>숫자할 입력하세요 <input type="text" name="su1" id="su1"></p>
+      <p>결과 <input type="text" name="su3" id="su3"></p>
+      <input type="button" value="계산" onclick="calc()">
+    </form>
+</p>
+</body>
+</html>
