@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daum</title>
+
+  <style>
+    #container{
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 35% 35% 30%;
+      grid-auto-rows: minmax(3em, auto);
+    }
+
+    ul li, a {
+      list-style: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    #content1{
+      width: 350px;
+      margin: 10px auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 47.5% 47.5%;
+      grid-auto-rows: minmax(2em, auto);
+    }
+
+    #content2{
+      width: 300px;
+      margin: 0px auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-rows: 30% 30% 40%;
+      grid-auto-rows: minmax(2em, auto);
+    }
+
+    #second{
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 20% 80%;
+      grid-auto-rows: minmax(2em, auto);
+    }
+    #category {
+      float: left;
+    }
+
+    .item:nth-child(1) {
+      grid-column: 1/4; /* 1번축에서 4번축까지를 하나로 한다. */
+      height: 150px;
+      }
+    .item:nth-child(2) {
+      grid-column: 1/4; /* 1번축에서 4번축까지를 하나로 한다. */
+      }
+    .item:nth-child(3) {
+      grid-column: 1/3; /* 1번축에서 4번축까지를 하나로 한다. */
+      height: 150px;
+    }
+    .item:nth-child(6) {
+        /* grid-column: 2; 열의 위치가 3번임을 알려준다 */
+    }
+    #top {
+      border: 1px solid gray;
+      height: 40px;
+    }
+    .top1 {
+      float: left;
+      margin: 0 11px;
+      font-size: 9pt;
+      position: relative;
+      font-size: 12pt;
+      margin-top: -7px;
+    }
+    #logo {
+      width: 130px;
+      height: 70px;
+      margin-left: 50px;
+      background-image: url(../../images/다음.jpg);
+      margin-top: 40px;
+    }
+    #img {
+      margin-top: 100px;
+    }
+    .text2 {
+      margin-left: 20px;
+    }
+    #input1 {
+      height: 140px;
+    }
+
+    #search {
+      width: 70%;
+      height: 48px;
+      margin-top: 50px;
+      border: 1px solid rgb(23, 165, 221);
+    }
+    #pwd {
+      margin-left: 10px;
+      width: 50%;
+      height: 15%;
+      margin-top: 15px;
+    }
+    #mid {
+      margin-left: 25px;
+      width: 50%;
+      height: 15%;
+      margin-top: 15px;
+    }
+    #main1{
+      background-image: url(../../images/메인2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 100%;
+    }
+    input[type="submit"] {
+      width: 90px;
+      height: 2 5px;
+      margin: 10px;
+      margin-left: 33px;
+    }
+
+    .item2 {
+      height: 150px;
+    }
+    .item2:nth-child(5) {
+      grid-column: 1/3; /* 1번축에서 4번축까지를 하나로 한다. */
+      height: 150px;
+      }
+    #img1 {
+      background-image: url(../../images/항목1.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      /* height: 93%; */
+    }
+
+    #img2 {
+      background-image: url(../../images/항목2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img3 {
+      background-image: url(../../images/항목3.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img4 {
+      background-image: url(../../images/항목4.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img5 {
+      background-image: url(../../images/항목5.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img6 {
+      background-image: url(../../images/목록1.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img7 {
+      background-image: url(../../images/목록2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #img8 {
+      background-image: url(../../images/목록3.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #word {
+      font-size: 11pt;      
+    }
+    a:hover{
+      text-decoration: underline;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="item" style="background-color:white" id="second">
+      <div id="logo"></div>
+      <div class="top2">
+        <label for="search"></label>
+        <input type="text" name="search" id="search" class="text1"/>
+      </div>
+    </div>
+    <div class="item" id="top" style="background-color:#e0e6f3">
+      <legend>
+        <nav>
+          <ul id="category">
+            <li class="top1"><a href="https://cafe.daum.net/javaspring">카페</a></li> 
+            <li class="top1"><a href="https://news.daum.net/">메일 </a></li>
+            <li class="top1"><a href="https://news.daum.net/">뉴스 </a></li>
+            <li class="top1"><a href="https://map.kakao.com/">지도 </a></li>
+            <li class="top1"><a href="https://finance.daum.net/">증권 </a></li>
+            <li class="top1"><a href="https://shoppinghow.kakao.com/top">쇼핑 </a></li>
+            <li class="top1"><a href="https://tv.kakao.com/">카카오TV </a></li>
+            <li class="top1"><a href="https://webtoon.kakao.com/">웹툰 </a></li>
+            <li class="top1"><a href="https://calendar.kakao.com/">캘린더 </a></li>
+            <li class="top1"><a href="https://brunch.co.kr/">브런치 </a></li>
+            <li class="top1"><a href="https://dic.daum.net/index.do">사전 </a></li>
+            <li class="top1"><a href="https://game.daum.net/">게임 </a></li>
+            <li class="top1"><a href="https://together.kakao.com/">같이가치 </a></li>
+            <li class="top1"><a href="#">더보기 </a></li>
+          </ul>
+        </nav>
+      </legend>
+    </div>  
+    <div class="item" id="main1" style="background-color:#9675C9"></div>  
+    <div class="item" id="input1" style="background-color:#eaf1f3">
+      <label for="mid" class="text2">아이디</label>
+      <input type="text" name="mid" id="mid" class="text2" /><br/>
+      <label for="pwd" class="text2">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" class="text2" />
+      <input type="submit" value="회원가입"/>  
+      <input type="submit" value="로그인"/>  
+    </div>  
+    <div class="item" style="background-color:#FFF">
+      <div id="content1">
+        <div class="item2" id="img1"><a href="https://v.daum.net/v/20221101170301855"><img src="../../images/항목1.jpg"></a></div>
+        <div class="item2" id="img2"><a href="https://v.daum.net/v/20221101152315643"><img src="../../images/항목2.jpg"></a></div>
+        <div class="item2" id="img3"><a href="https://sports.daum.net/video/433173147"><img src="../../images/항목3.jpg"></a></div>
+        <div class="item2" id="img4"><a href="https://entertain.daum.net/tv/5520579/video/433173746"><img src="../../images/항목4.jpg"></a></div>
+        <div class="item2" id="img5"></div>
+      </div>
+    </div>  
+    <div class="item" id="word" style="background-color: white">
+      브랜드(Brand)는 어떤 경제적인 생산자를 구별하는 지각된 이미지와 경험의 집합이며 보다 좁게는 어떤 상품이나 회사를 나타내는 상표, 표지이다. 숫자, 글자, 글자체, 간략화된 이미지인 로고, 색상, 구호를 포함한다. 브랜드는 특히 기업의 무형자산으로 소비자와 시장에서 그 기업을 나타내는 가치를 나태낸다. 마케팅, 광고, 홍보, 제품 디자인 등에 직접 사용됨<br/><br/>
+
+많은 연구자들은 브랜드가 일단 리더십을 얻게 되면 그것을 수십 년간 유지해왔다고 주장하고 있다. 경영자들이 브랜드의 리더십 유지를 중요하게 생각하는 데는 몇 가지 이유가 있다. 첫째, 오래된 브랜드가 고객의 관심을 받기 때문이다. 오래된 브랜드는 상대적으로 마케팅 비용을 적게 들여도, 프리미엄 가격을 받을 수 있다.<br/><br/> 이와는 대조적으로 새 브랜드나 시장이 작은 브랜드는 시장 진출과 인지도 획득을 위해 많은 마케팅 비용을 들여야 한다. 둘째, 마켓리더는 규모의 경제를 이용할 수 있다. 따라서 좁은 틈새시장을 확보한 경쟁상대에 비해 능률적인 경영정책으로 더 높은 수익을 누릴 수 있다. 
+    </div>  
+    <div class="item" style="background-color:#FFF">
+      <div id="content2">
+        <div class="item2" id="img6" style="background-color:#2b8296"></div>
+        <div class="item2" id="img7" style="background-color:#cbd4d6"></div>
+        <div class="item2" id="img8" style="background-color:#b6c210"></div>
+      </div>
+    </div> 
+</div>
+</body>
+</html>

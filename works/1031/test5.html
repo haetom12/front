@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5.html</title>
+  <style>
+    body{
+      margin: 50px;
+      background-color: aquamarine;
+    }
+    #box1 {
+      margin: 0px 20px;
+      padding: 0px 50px;
+      border: 10px solid red;
+      /* height: 100px; */
+      /* background-color: yellow; */
+      background-image: url(../../images/2.jpg);
+    }
+    #box2 {
+      width: 500px;
+      height: 200px;
+      background-color: rosybrown;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #box3 {
+      background-image: url(../../images/1.jpg);
+      width: 500px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    #box4 {
+      width: 500px;
+      height: 200px;
+      background-color: brown;
+      position: absolute; /*나보다 한단계 상위개체를 기준으로 함(body)*/
+      left: 200px; /*왼쪽에서 50프로 위에서 50프로 떨어진곳 (기준은 왼쪽위 모서리!!)*/
+      top: 300px;
+      z-index: 2; /* 숫자가 높을수록 다른것들보다 화면 앞쪽으로 올라옴 */
+    }
+    #box4-1{
+      position: relative; /* 원래 나와야할 위치에서 기준 */
+      left: 100px;
+      top: 100px;
+      color: aqua;
+    }
+    #box5 {
+      width: 500px;
+      height: 300px;
+      background-color: yellow;
+      position: fixed; /*보이는 화면에서 고정*/
+      left: 50%; /*왼쪽에서 50프로 위에서 50프로 떨어진곳 (기준은 왼쪽위 모서리!!)*/
+      top: 50%; 
+      z-index: 1;
+    }
+    #box5-1 {
+      position: relative;
+      top: 115px;
+    }
+    #box6 {
+      position: absolute;
+      left: 70%;
+      top: 80%;
+      background-color: blueviolet;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <span>연습</span>
+  <h2>포지션 연습</h2>
+  <div>
+    포지션 : static, relative, absolute, fixed
+  </div>
+  <div id="box1">
+    이곳은 Box1입니다.<br/>
+    <p>연습1</p>
+    <p>연습2</p>
+    <p>연습3</p>
+    <p>연습4</p>
+    <p>연습5</p>
+  </div>
+  <div id="box2">연습2</div>
+  <div id="box3">연습3</div>
+  <div id="box4">
+    <div id="box4-1">연습4</div>
+  </div>
+  <div id="box5">
+  <div id="box5-1">연습5</div>
+  </div>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <p>안녕하세요</p>
+  <div id="box6">이곳은 box6</div>
+</body>
+</html>

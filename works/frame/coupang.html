@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coupang</title>
+
+<style>
+  #container{
+    width: 1000px;
+    height:1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 8% 22% 6% 16% 16% 16% 16%;
+    grid-auto-rows: minmax(2em, auto);
+  }
+  #main1 {
+    width: 1000px;
+    /* height:200px; */
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 10% 20% 55% 15%;
+    grid-auto-rows: minmax(2em, auto);
+  }
+  .top:nth-child(1) {
+        grid-row: 1/3; /* 열의 위치가 3번임을 알려준다*/
+  }
+  .top:nth-child(5) {
+        grid-column: 2/5; /* 열의 위치가 3번임을 알려준다*/
+  }
+  #top1{
+    background-image: url(../../images/쿠팡1.jpg);
+    background-size: 100%;
+  }
+  #top1:hover{
+    back
+  }
+  #top2,#top3,#top4 {
+    height: 80px;
+  }
+  #top5 {
+    height: 40px;
+  }
+
+</style>
+
+</head>
+<body>
+  <div id="container">
+    <div class="item" id="main1" style="background-color:#9675C9">
+      <div class="top" id="top1"></div>
+      <div class="top" id="top2" style="background-color:#cf1414">2</div>
+      <div class="top" id="top3" style="background-color:#c1e715">3</div>
+      <div class="top" id="top4" style="background-color:#34a3e4">4</div>
+      <div class="top" id="top5" style="background-color:#eb06b2">5</div>
+    </div>
+    <div class="item" id="main2" style="background-color:#e6e1ee"></div>
+    <div class="item" id="main3" style="background-color:#2abeab"></div>
+    <div class="item" id="main4" style="background-color:#3ce708"></div>
+    <div class="item" id="main5" style="background-color:#df0f0f"></div>
+    <div class="item" id="main6" style="background-color:#0a07ac"></div>
+    <div class="item" id="main7" style="background-color:#dd600c"></div>
+
+  </div>
+</body>
+</html>

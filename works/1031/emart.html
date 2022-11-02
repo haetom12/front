@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>emart</title>
+
+  <style>
+    header {
+      width: 100%;
+      height: 100px;
+    }
+    #container{
+      width: 1180px;
+      margin: 0 auto;
+    }
+    section{
+      width: 1180px;
+      height: 1800px;
+      /* background-color: aqua; */
+    }
+    nav {
+      text-align: center;
+    }
+    nav > ul {
+      /* background-color: #dfdfdf; */
+      display: inline-block;
+      border-radius: 10px;
+      /* padding: 0 10px; */
+    }
+    nav > ul > li {
+      display: inline-block;
+      width: 110px;
+    }
+    nav li:hover > a {
+      background-color: black;
+      color: #fff;
+      border-radius: 10px;
+    }
+    nav li {
+      position: relative;
+    }
+    /* 서브 메뉴 만들기 */
+    nav ul ul {
+      display: none;
+      position: absolute;
+      width: 110px;
+      border-radius: 10px;
+    }
+    nav li > a {
+      display: block;
+      padding: 10px;
+    }
+    #left{
+      margin-left: 10%;
+    }
+    #right{
+      margin-right: 10%;
+    }
+    .top1 {
+      float: left;
+      margin: 0 10px;
+      font-size: 9pt;
+      position: relative;
+    }
+    .top2 {
+      float: right;
+      margin: 0 10px;
+      font-size: 9pt;
+      position: relative;
+    }
+    .top3 {
+      float:left;
+      margin: 15px 25px;
+      font-size: 18pt;
+      position: relative;
+    }
+    .top4 {
+      float:left;
+      position: relative;
+    }
+    ul li, a {
+      list-style: none;
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: black;
+    }
+    body{
+      text-align: center;
+    }
+    footer{
+      clear: both;
+      height: 300px;
+      margin: 0 auto;
+    } 
+    #content1 {
+      float:left;
+      width: 1180px;
+      height:600px;
+      margin: 0 auto 200px auto;
+      /* background-color: yellow; */
+    }
+    #logo {
+      width: 1180px;
+      height:80px;
+      margin-left: 15%;
+    }
+  
+    #content2{
+      float:left;
+      width: 600px;
+      height: 300px;
+      margin: 0 25% 220px 25%;
+      /* background-color: blue; */
+    }
+    #content2-1, #content2-2 {
+      float: left;
+      width: 300px;
+      height: 270px;
+      background-color: khaki;
+      font-style: italic;
+      color: brown;
+    }
+    #content2-1{
+      background-image: url(../../images/김치.jpg);
+    }
+    #content2-2 {
+      font-size: 18pt;
+      font-weight: bolder;
+      padding-right: 0px;
+    }
+
+    #content3 {
+      float:left;
+      width: 1100px;
+      height: 520px;
+      /* background-color: rgb(228, 10, 10); */
+      margin-left: 7%;
+      
+    }
+    #content3-1, #content3-2, #content3-3 {
+      float: left;
+      width: 300px;
+      margin: 7px;
+      height: 200px;
+      padding: 20px;
+    }
+    #content3-1 {
+
+      /* background-color: blue; */
+      width: 600px;
+      height: 456px;
+      background-image: url(../../images/이마트사진1.jpg) ;
+    }
+    #content3-2 {
+      background-image: url(../../images/이마트사진2.jpg) ;
+    }
+    #content3-3 {
+      background-image: url(../../images/이마트사진3.jpg) ;
+    }
+    #sale {
+      font-size: 20pt;
+      font-weight: bolder;
+    }
+    #sale2 {
+      font-size: 20pt;
+      font-weight: bolder;
+      margin-right: 90px;
+    }
+    legend {
+      border: 1px solid gray;
+      height: 50px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+  <legend>
+    <header>
+      <nav>
+        <ul id="left">
+          <li class="top1"><a href="#">PEACOCK |</a></li> 
+          <li class="top1"><a href="#">이마트몰 |</a></li>
+        <li class="top1"><a href="#">신세계포인트 |</a></li>
+        <li class="top1"><a href="#">문화센터 |</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul id="right">
+        <li class="top2"><a href="#">My이마트 |</a></li>
+        <li class="top2"><a href="#">이마트뮤직 |</a></li>
+        <li class="top2"><a href="#">이마트TV |</a></li>
+        <li class="top2"><a href="#">로그인 |</a></li>
+        <li class="top2"><a href="#">회원가입 |</a></li>
+      </ul>
+    </nav>
+  </header>
+</legend>
+  <section>
+    <div id="content1">
+      <div id="logo">
+        <nav>
+          <ul>
+            <li class="top3"><a href="#">점포찾기</a></li>
+              <ul>
+                <li><a href="#">이마트/전문점 찾기</a></li>
+                <li><a href="#">입점매장 찾기</a></li>
+                <li><a href="#">휴점일 알아보기</a></li>
+              </ul>
+            <li class="top3"><a href="#">전단광고</a></li>
+              <ul>
+                <li><a href="#">금주의 전단광고</a></li>
+                <li><a href="#">인기 광고</a></li>
+              </ul>
+            <li class="top4" class="img2"><a href="#"><img src="../../images/로고.jpg"></a></li>
+            <li class="top3"><a href="#">이벤트</a></li>
+            <ul>
+              <li><a href="#">전체 이벤트</a></li>
+              <li><a href="#">진행중인 이벤트</a></li>
+              <li><a href="#">카드 행사</a></li>
+              <li><a href="#">당첨 발표</a></li>
+            </ul>
+            <li class="top3"><a href="#">고객센터</a></li>
+            <ul>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">고객문의</a></li>
+              <li><a href="#">고객만족도제도</a></li>
+            </ul>
+          </ul>
+        </div>
+      <div>
+        <img src="../../images/이마트.jpg" >
+      </div>
+    </div>
+
+    <div id="content2">
+      <p id="sale">금주의 득템 찬스!</p>
+      <div id="content2-1">
+      </div>
+      <div id="content2-2">
+        <p>풍부한 비타민</p>
+        <p>소화 촉진</p>
+        <p>항암 효과</p>
+        <p>빈혈 예방</p>
+      </div>
+    </div>
+
+    <div id="content3">
+      <p id="sale2">언제 어디서나 즐거운 콘텐츠</p>
+      <div id="content3-1">
+        사진1
+      </div>
+
+      <div id="content3-2">
+        사진2
+      </div>
+
+      <div id="content3-3">
+        사진3
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div>
+      <img src="../../images/이마트4.jpg" width="1100px" >
+    </div>
+  </footer>
+</div>
+</body>
+</html>
