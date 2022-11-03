@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기</title>
+  <script>
+    'use strict'
+    function num(su) {
+      document.getElementById("calc").value += su;
+    }
+    function help(su) {
+      if(su=="0"){
+        document.getElementById("calc").value = "";
+      }
+      else if(su==1) {
+        document.getElementById("calc").value += "+";
+      }
+      else if(su==2) {
+        document.getElementById("calc").value += "-";
+      }
+      else if(su==3) {
+        document.getElementById("calc").value += "*";
+      }
+      else {
+        document.getElementById("calc").value += "/";
+      }
+    }
+
+    function cnt() {
+      let cnt = eval(document.getElementById("calc").value);
+      document.getElementById("calc").value = parseFloat(cnt);
+    }
+
+  </script>
+  <style>
+    #body {
+    }
+
+    #container {
+      margin: 0px auto;
+      padding-left: 3px;
+      width: 260px;
+      height: 400px;
+      background-color: aqua;
+      display: grid;
+      /* grid-gap: 0.5em; 위아래 간격 */
+      grid-template-columns: 1fr 1fr 1fr 1fr
+    }
+    .btn {
+      width: 60px;
+      height: 60px;
+      margin-top: 10px;
+    }
+    #calc {
+      width: 250px;
+      height: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <form name="myform" method="get" action="#">
+      <p><input type="text" name="calc" id="calc"></p>
+      <div>
+        <input type="button" value="0" class="btn" id="su0" onclick="num(0)">
+        <input type="button" value="A/C" class="btn" id="clear" onclick="help(0)">
+        <input type="button" value="X" class="btn" id="mulp" onclick="help(3)">
+        <input type="button" value="%" class="btn" id="divi" onclick="help(4)">
+        <input type="button" value="1" class="btn" id="su1" onclick="num(1)">
+        <input type="button" value="2" class="btn" id="su2" onclick="num(2)">
+        <input type="button" value="3" class="btn" id="su3" onclick="num(3)">
+        <input type="button" value="+" class="btn" id="plus" onclick="help(1)">
+        <input type="button" value="4" class="btn" id="su4" onclick="num(4)">
+        <input type="button" value="5" class="btn" id="su5" onclick="num(5)">
+        <input type="button" value="6" class="btn" id="su6" onclick="num(6)">
+        <input type="button" value="-" class="btn" id="minus" onclick="help(2)">
+        <input type="button" value="7" class="btn" id="su7" onclick="num(7)">
+        <input type="button" value="8" class="btn" id="su8" onclick="num(8)">
+        <input type="button" value="9" class="btn" id="su9" onclick="num(9)">
+        <input type="button" value="=" class="btn" id="equal" onclick="cnt()">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
