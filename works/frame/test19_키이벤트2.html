@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그림속성연습</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    'use strict';
+    let num;
+    let su1;
+    let su2;
+    let inputnum;
+
+    function KeyboardEvent(e) {
+      if(e.type == "keydown") {
+        if(e.which == 38) {
+        // inputnum = parseInt(document.getElementById("mine").value++);
+        mine.innerHTML = inputnum= parseInt(document.getElementById("mine").value++);
+        }
+        else if(e.which == 40) {
+          mine.innerHTML = inputnum = parseInt(document.getElementById("mine").value--);
+        }
+      }
+      else if(e.type == "keypress") if(e.which == 32) location.reload();
+    }
+
+    
+    function CreateNum() {
+      su1 = parseInt(document.getElementById("min").value); 
+      su2 = parseInt(document.getElementById("max").value); 
+      console.log(su1);
+      console.log(su2);
+      num = parseInt((Math.random()*(su2-su1+1))+su1);
+      demo.innerHTML = num;
+    }
+  
+    function CheckNum() {
+      inputnum = document.getElementById("mine").value;
+      if(su1=="" || su2=="" || inputnum =="") {
+        alert("숫자를 모두 입력하세요");
+      }
+      else if (inputnum < num) {
+        demo2.innerHTML = "입력된 숫자가 더 작습니다";
+      }
+      else if (inputnum > num) {
+        demo2.innerHTML = "입력된 숫자가 더 높습니다";
+      }
+      else {
+        demo2.innerHTML = "숫자가 동일합니다 ㅊㅊ";
+      }
+  
+    }
+  
+    // document.onmousedown = KeyboardEvent;
+    document.onkeydown = KeyboardEvent;
+    document.onkeypress = KeyboardEvent;
+  </script>
+
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>숫자 맞추기</h2>
+  <p>숫자를 입력하면 컴퓨터 숫자와 비교해줍니다</p>
+  <div>
+    <input type="number" id="min" placeholder="범위 최소값 입력" class="form-control mb-2">
+    <input type="number" id="max" placeholder="범위 최대값 입력" class="form-control mb-2">
+    <input type="number" id="mine" placeholder="숫자를 입력하세요" class="form-control mb-2">
+  </div>
+  <p><input type="button" value="숫자생성" onclick="CreateNum()" class="btn btn-primary" /></p>
+  <p><input type="button" value="비교하기" onclick="CheckNum()" class="btn btn-primary" /></p>
+  <p><input type="button" value="새로고침" onclick="location.reload();" class="btn btn-primary" /></p>
+  <hr/>
+  <div id="demo">생성된 숫자 </div>
+  <div id="demo2"></div>
+</div>
+<p><br/></p>
+</body>
+
+</html>
