@@ -13,7 +13,7 @@
     'use strict';
     function rightClick(e) {
       if(e.which !=1) {
-        // alert("마우스 오른쪽 버튼은 사용하실수 없습니다.")
+        alert("마우스 오른쪽 버튼은 사용하실수 없습니다.")
         return false;
       }
     }
@@ -21,9 +21,9 @@
     //   return false;
     // }
 
-    document.onmousedown = rightClick;  // 왼쪽 = 오른쪽 // 왼쪽값을 오른쪽에 넘김(자바랑 반대)
+    // document.onmousedown = rightClick;  // 왼쪽 = 오른쪽 // 왼쪽값을 오른쪽에 넘김(자바랑 반대)
 
-    document.oncontextmenu = function() {return false;}
+    document.oncontextmenu = function() {return false;} // oncontextmenu = 우클릭 속성
   </script>
 </head>
 <body>
