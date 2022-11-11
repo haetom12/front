@@ -1,0 +1,32 @@
+<form name="myform">
+  <table>
+    <tr>
+      <td>
+        <input type="button" value="상품추가" onclick="insRow()"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table id="addTable" width="400px">
+          <tr>
+            <td>
+              단가:<input type="text" name="addText1" style="width:60px; height:20px; "/>
+              수량:<input type="text" name="addText2" style="width:60px; height:20px; " onblur="formCalc();"/>
+              금액:<input type="text" name="result" readonly style="width:60px; height:20px;"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <table width="400px">
+    <tr>
+      <td style="text-align:center">
+        <input type="button" value="확인" onclick="fChcek()"/>
+        <input type="reset" value="다시입력"/>
+        <input type="button" value="초기화" onclick="location.reload()"/>
+      </td>
+    </tr>
+  </table>
+</form>

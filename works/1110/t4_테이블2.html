@@ -11,26 +11,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     'use strict';
-    // $(function(){
-    //   //특정행을 보여주기 : 예) 텍스트필드에 입력한 글자가 들어간 행만 보여주기
-    //   $('#keyword').keyup(function(){
-    //     $('#nations tbody tr').hide();
-
-    //     // $('#keyword').val();
-    //     let word = $(this).val(); // this. : 이위치까지의/ .val(): 값을 밑에 contain 포함되는것 보여줘라
-    //     $('#nations tbody td:contains("'+word+'")').parent().show();
-    //   })
-    // })
-
     $(function(){
-      $('#keyword').keyup(function(){
-        
-      });
+      // $('#nations > tbody >tr:odd').css('backgroundColor','pink')
+      // $('#nations > tbody >tr:even').css('backgroundColor','skyblue')
+      // $('#nations > tbody >tr:first').css('backgroundColor','skyblue')
+      // $('#nations > tbody >tr:last').css('backgroundColor','skyblue')
+      // $('#nations > tbody >tr:lt(5)').css('backgroundColor','skyblue')
+      $('#nations > tbody >tr:gt(5)').css('backgroundColor','skyblue')
     });
 
-
-
   </script>
+  <style>
+    
+  </style>
 </head>
 <body>
 <p><br/></p>
@@ -38,7 +31,7 @@
   <h2>국가별 수도 - 2</h2>
   <div>
     <div>
-      국가명 : <input type=" text" name="keyword" id="keyword" class="form-control" /><br/>
+      국가명 : <input type=" text" name="keywork" class="form-control" /><br/>
     </div>
     <table class="table nation" id="nations">
       <thead>
@@ -61,7 +54,7 @@
           <tr><td>14</td><td>멕시코</td><td>멕시코시티</td></tr>
           <tr><td>15</td><td>베네수엘라</td><td>카라카스</td></tr>
           <tr><td>16</td><td>서사모아</td><td>아피아</td></tr>
-          <tr><td>17</td><td>대한민국</td><td><b>서울</b></td></tr>
+          <tr><td>17</td><td>대한민국</td><td>서울</td></tr>
       </tbody>
     </table>
   </div>
@@ -69,7 +62,7 @@
   <h2>국가별 수도 - 2</h2>
   <div>
     <div>
-      국가명 : <input type=" text" name="keyword" id="keyword" class="form-control" /><br/>
+      국가명 : <input type=" text" name="keywork" class="form-control" /><br/>
     </div>
     <table class="table nation" id="nations">
       <thead>

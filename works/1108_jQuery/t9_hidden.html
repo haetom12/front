@@ -12,7 +12,7 @@
   <script>
     'use strict';
     $(document).ready(function(){
-      let show = $('.container div:visible');
+      let show = $('.container > div:visible');
       console.log(show);
 
       let showArray = [];
@@ -25,25 +25,35 @@
 
       // $('#demo div:first').text(showArray);
       $('#demo div:first').html(showArray);
-      
 
-      // map문을 사용하여 값을 읽어올때는 get()메소드를 사용한다.
-      let hiddenArray = $('.container > div:hidden').map(function(i,item){
-        // console.log(item);
+      // map문을 이용한 처리
+      // $('.container > div:hidden').map(function(i, item){
+      //   console.log(item);
+      // // });
+
+      // map을 사용하여 값을 읽어올때는 get()메소드를 사용한다.
+      let hiddenArray = $('.container > div:hidden').map(function(i, item){
+        // console.log(item);   //div:hidden 은 그냥 화면에 보이지도 않고 데이터도 없는놈
         return $(item).html();
       });
       // console.clear();
       console.log(hiddenArray);
-      console.clear();
+      // console.clear();
 
-      hiddenArray = $('.container > div:hidden').map(function(i,item){
+      hiddenArray = $('.container > div:hidden').map(function(i, item){
         // console.log(item);
         return $(item).html();
-      }).get().join('/'); 
+      }).get().join('/');
       // console.log(hiddenArray);
       
+      
+      // $('#demo div:last').text(hiddenArray);
+
       $('#demo div:last').html('<br/>'+hiddenArray);
     });
+
+
+
   </script>
 </head>
 <body>
@@ -54,10 +64,10 @@
   <div style="display: none;">안녕하세요3</div> <!-- display:none 는 완전히 사라짐 -->
   <div>안녕하세요4</div>
   <div style="visibility: hidden;">안녕하세요5</div>  <!-- visibility: hidden 화면에서만 보여주지 않음(영역은 존재함) -->
-  <div style="overflow: hidden;">안녕하세요6</div> <!--레이어블록에서 글자가 넘칠때 가능-->
-  <div style="overflow: hidden; width: 0px; height:0px; ">안녕하세요7</div> <!--공간이 부족해서 보여주지 않는다.-->
+  <div style="overflow: hidden;">안녕하세요6(레이어블록에서 글자가 넘칠때 처리)</div>
+  <div style="overflow: hidden; width:0px; height:0px">안녕하세요7</div>  <!-- 공간이 부족해서 보여주지 않는다. -->
   <div style="display: none;">안녕하세요8</div>
-  
+  <div>안녕하세요9</div>
   <hr/>
   <div id="demo">
     <div></div>

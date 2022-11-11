@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블속성</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    'use strict';
+    $(function(){
+      let y = 0;
+      let x = 0;
+
+      let j1 = $('h2').offset();
+      let j2 = $('#img1').offset();
+
+      $(document).keydown(function(evt){
+
+        if(evt.keyCode == '37') {
+            if(x<=0) {
+              alert("더이상 왼쪽으로 갈수 없습니다.");
+              return;
+            }
+            x--;
+            $('#img1').animate({marginLeft: (x*50)+"px"},0)
+        }
+      
+        
+        else if(evt.keyCode == '38')  {
+            if(y<=0) {
+              alert("더이상 위로 올라갈수 없습니다.");
+              return;
+            }
+            y--;
+            $('#img1').animate({marginTop: (y*50)+"px"},0)
+        }
+        
+        else if(evt.keyCode == '39')  {
+            if(x>=10) {
+              alert("더이상 오른쪽으로 갈수 없습니다.");
+              return;
+            }
+            x++;
+            $('#img1').animate({marginLeft: (x*50)+"px"},0)
+        }
+
+        else if(evt.keyCode == '40')  {
+            if(y >= 10) {
+              alert("더이상 아래로 내려갈수 없습니다.");
+              return;
+            }
+            y++;
+            $('#img1').animate({marginTop: (y*50)+"px"},0)
+        }
+      });
+      $(document).keydown(function(evt){
+        if(evt.keyCode == '37') $('#demo2').html("왼쪽키를 누르셨습니다.");
+        else if(evt.keyCode == '38') $('#demo2').html("위쪽키를 누르셨습니다.");
+        else if(evt.keyCode == '39') $('#demo2').html("오른쪽키를 누르셨습니다.");
+        else if(evt.keyCode == '40') $('#demo2').html("아래쪽키를 누르셨습니다.");
+      });
+      
+    });
+
+  </script>
+  <style>
+    .container {
+      width: 650px;
+      height: 750px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>Animation 키보드연습</h2>
+  <br/><hr/><br/>
+  <div>
+    <img src="../../images/2.jpg" width="100px" height="100px" id="img1"/>
+  </div>
+  <hr/>
+  <div id="demo"></div>
+  <hr/>
+  <div id="demo2"></div>
+</div>
+<p><br/></p>
+</body>
+</html>
